@@ -1,0 +1,24 @@
+.container {
+  background-color: #413c58;
+}
+
+.header {
+  color: #ffffff;
+  align-items: center;
+  display: flex;
+}
+
+.title {
+  font-size: xx-large;
+  margin: 2%;
+}
+
+.navigations {
+  font-size: medium;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav {
+  margin: 4%;
+}
