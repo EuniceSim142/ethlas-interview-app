@@ -1,6 +1,9 @@
 import styles from "./layout.module.css";
 import Link from "next/link";
 import ROUTES from "../constants/routes";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faYoutube, faReddit } from "@fortawesome/free-brands-svg-icons";
+import { faGithub } from "@fortawesome/free-solid-svg-icons";
 
 export default function Layout({ children }) {
   return (
@@ -30,7 +33,23 @@ export default function Layout({ children }) {
         </ul>
       </header>
       {children}
-      <footer>Footer :)</footer>
+      <footer className={styles.footer}>
+        <section className={styles.disclaimer}>
+          <p>
+            We are not affiliated, associated, authorized, endorsed by, or in
+            any way officially connected with Space Exploration Technologies
+            Corp (SpaceX), or any of its subsidiaries or its affiliates.
+            <br></br>The names SpaceX as well as related names, marks, emblems
+            and images are registered trademarks of their respective owners.
+          </p>
+          <br></br>
+          Credits to:{" "}
+          <strong className={styles.navToAPI}>
+            <a href="https://github.com/r-spacex/SpaceX-API">SpaceX API</a>
+          </strong>{" "}
+          for the SpaceX data used
+        </section>
+      </footer>
     </article>
   );
 }

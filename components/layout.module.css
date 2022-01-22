@@ -6,6 +6,7 @@
   color: #ffffff;
   align-items: center;
   display: flex;
+  border-bottom: 1px dashed #ffffff;
 }
 
 .title {
@@ -22,3 +23,30 @@
 .nav {
   margin: 4%;
 }
+
+.footer {
+  padding-left: 3%;
+  padding-right: 3%;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px dashed #ffffff;
+}
+
+.navToAPI {
+  text-decoration: none;
+}
+
+.navToAPI a:hover {
+  text-decoration: underline;
+}
+
+.disclaimer {
+  /* width: 60%; */
+  padding: 2%;
+  font-size: large;
+}
+
+/* .more {
+  padding: 2%;
+} */

@@ -1,6 +1,8 @@
 .content {
   width: 96%;
   margin: auto;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
 
 .content_crew {
@@ -8,4 +10,6 @@
   margin: auto;
   display: flex;
   flex-direction: row;
+  padding-top: 1%;
+  padding-bottom: 1%;
 }
