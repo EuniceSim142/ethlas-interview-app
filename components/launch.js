@@ -5,10 +5,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faReddit } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
+import { IMAGE_DOMAIN } from "../constants/utils";
 
 export default function launch({ data }) {
-  const imgSrc = data?.links.flickr.original[0];
+  const imgSrc = data?.links.flickr.original.find((link) =>
+    link.includes(IMAGE_DOMAIN)
+  );
   const date = new moment(data?.date_utc).format("MMMM Do YYYY, h:mm a");
+
+  const crew = data.crew.join(", ");
 
   return (
     <article className={styles.container}>
@@ -32,6 +37,9 @@ export default function launch({ data }) {
         </li>
         <li className={styles.launch_data}>
           <strong>Rocket:</strong> {data.rocket}
+        </li>
+        <li className={styles.launch_data}>
+          <strong>Crew:</strong> {crew}
         </li>
         <li className={styles.launch_data}>
           <strong>Launch pad:</strong> {data.launchpad}
