@@ -1,11 +1,16 @@
 import styles from "./layout.module.css";
 import Link from "next/link";
+import ROUTES from "../constants/routes";
 
 export default function Layout({ children }) {
   return (
     <article className={styles.container}>
       <header className={styles.header}>
-        <h1 className={styles.title}>SpaceX</h1>
+        <h1 className={styles.title}>
+          <Link href="/">
+            <a>SpaceX</a>
+          </Link>
+        </h1>
         <ul className={styles.navigations}>
           <li className={styles.nav}>
             <Link href="./launches">
@@ -15,11 +20,6 @@ export default function Layout({ children }) {
           <li className={styles.nav}>
             <Link href="./spacecrafts">
               <a>Spacecrafts</a>
-            </Link>
-          </li>
-          <li className={styles.nav}>
-            <Link href="/">
-              <a>Home</a>
             </Link>
           </li>
         </ul>

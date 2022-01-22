@@ -1,6 +1,8 @@
 import Layout from "../../components/layout";
 import Head from "next/head";
 import Link from "next/link";
+import Launch from "../../components/launch";
+import styles from "../../styles/Launches.module.css";
 
 export default function launches() {
   return (
@@ -9,8 +11,8 @@ export default function launches() {
         <title>Launches and Landings</title>
         <link rel="icon" href="../../spacecraft.svg" />
       </Head>
-      <article>
-        <h1>Launches</h1>
+      <article className={styles.launch_content}>
+        <Launch></Launch>
       </article>
     </Layout>
   );

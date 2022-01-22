@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  align-self: center;
+  width: 50%;
+  height: 50%;
+}
+
+.image {
+  width: 50%;
+  padding: 1%;
+  border-radius: 40px;
+  max-height: 60%;
+  object-fit: cover;
+}
+
+.content {
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+.launch_name {
+  font-size: x-large;
+  font-weight: bolder;
+}
+
+.launch_data {
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.launch_data_description {
+  color: grey;
+  padding: 4px;
+  margin-bottom: 10px;
+}
+
+.launch_data_link {
+  text-decoration: none;
+  margin: 2%;
+  font-size: x-large;
+}
+
+.launch_data_link a:hover {
+  color: #0070f3;
+}
+
+.media_content {
+  list-style-type: none;
+  display: flex;
+  text-align: left;
+}

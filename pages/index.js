@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
+import Company from "../components/company";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
           <h1 className={styles.title}>SpaceX</h1>
           <p>All you need to know and more!</p>
         </section>
-        <section>Company Info</section>
+        <Company></Company>
         <section className={styles.navToData}>
           <Link href="/category/launches">
             <a>Let's get started!</a>
