@@ -1,10 +1,39 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import Company from "../components/company";
 
 export default function Home() {
+  const companyData = [
+    {
+      headquarters: {
+        address: "Rocket Road",
+        city: "Hawthorne",
+        state: "California",
+      },
+      links: {
+        website: "https://www.spacex.com/",
+        flickr: "https://www.flickr.com/photos/spacex/",
+        twitter: "https://twitter.com/SpaceX",
+        elon_twitter: "https://twitter.com/elonmusk",
+      },
+      name: "SpaceX",
+      founder: "Elon Musk",
+      founded: 2002,
+      employees: 8000,
+      vehicles: 3,
+      launch_sites: 3,
+      test_sites: 1,
+      ceo: "Elon Musk",
+      cto: "Elon Musk",
+      coo: "Gwynne Shotwell",
+      cto_propulsion: "Tom Mueller",
+      valuation: 52000000000,
+      summary:
+        "SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.",
+      id: "5eb75edc42fea42237d7f3ed",
+    },
+  ];
   return (
     <div className={styles.container}>
       <Head>
@@ -18,7 +47,7 @@ export default function Home() {
           <h1 className={styles.title}>SpaceX</h1>
           <p>All you need to know and more!</p>
         </section>
-        <Company></Company>
+        <Company data={companyData[0]}></Company>
         <section className={styles.navToData}>
           <Link href="/category/launches">
             <a>Let's get started!</a>

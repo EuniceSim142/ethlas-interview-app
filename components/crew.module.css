@@ -5,62 +5,55 @@
   vertical-align: middle;
   align-self: center;
   margin: 1%;
+  width: 98%;
+  justify-content: center;
   border-radius: 40px;
 }
 
 .image {
-  width: 60%;
-  padding: 0.5%;
+  width: 50%;
+  padding: 1%;
   border-radius: 40px;
   max-height: 60%;
   object-fit: cover;
 }
 
 .content {
-  padding: 1%;
+  width: 50%;
+  padding-left: 6%;
+  padding-right: 6%;
   display: flex;
   flex-direction: column;
   list-style-type: none;
 }
 
-.launch_name {
+.crew_name {
   font-size: x-large;
   font-weight: bolder;
 }
 
-.launch_data {
+.crew_data {
   padding: 4px;
   margin-bottom: 10px;
 }
 
-.launch_data_description {
-  color: grey;
-  padding: 4px;
-  margin-bottom: 10px;
-}
-
-.launch_data_link {
+.crew_data_link {
   text-decoration: none;
   margin: 2%;
   font-size: x-large;
 }
 
-.launch_data_upcoming {
-  color: #0070f3;
-  margin-top: 5px;
-}
-
-.launch_data_outcome_success {
+.crew_data_status_active {
   color: green;
   margin-top: 5px;
 }
 
-.launch_data_outcome_failure {
+.crew_data_status_inactive {
   color: grey;
   margin-top: 5px;
 }
 
-.launch_data_link a:hover {
+.crew_data_link a:hover {
   color: #0070f3;
 }
 

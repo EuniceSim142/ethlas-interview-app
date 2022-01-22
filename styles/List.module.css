@@ -1,0 +1,11 @@
+.content {
+  width: 96%;
+  margin: auto;
+}
+
+.content_crew {
+  width: 96%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}

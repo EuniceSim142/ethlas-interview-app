@@ -22,6 +22,11 @@ export default function Layout({ children }) {
               <a>Spacecrafts</a>
             </Link>
           </li>
+          <li className={styles.nav}>
+            <Link href="./crew">
+              <a>Crew</a>
+            </Link>
+          </li>
         </ul>
       </header>
       {children}
