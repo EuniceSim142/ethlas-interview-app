@@ -4,6 +4,11 @@ import Link from "next/link";
 import Company from "../components/company";
 import { spaceXClient } from "../lib/spacex-client";
 
+/**
+ * Displays Homepage and Company data using {@link Company} Component.
+ * @param {JSON} data Company data.
+ * @returns Homepage.
+ */
 export default function Home({ data }) {
   return (
     <div className={styles.container}>
