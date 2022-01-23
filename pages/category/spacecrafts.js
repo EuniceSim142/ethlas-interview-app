@@ -20,10 +20,10 @@ export default function spacecrafts({ dragons, rockets }) {
       </Head>
       <article className={styles.content}>
         {dragons.map((dragonData) => {
-          return <Dragon data={dragonData}></Dragon>;
+          return <Dragon data={dragonData} key={dragonData.id}></Dragon>;
         })}
         {rockets.map((rocketData) => {
-          return <Rocket data={rocketData}></Rocket>;
+          return <Rocket data={rocketData} key={rocketData.id}></Rocket>;
         })}
       </article>
     </Layout>

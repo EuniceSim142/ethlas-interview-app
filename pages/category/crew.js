@@ -29,7 +29,7 @@ export default function crew({ data }) {
         </article>
         <article className={styles.column}>
           {right.map((crewData) => {
-            return <Crew data={crewData}></Crew>;
+            return <Crew data={crewData} key={crewData.id}></Crew>;
           })}
         </article>
       </article>

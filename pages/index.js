@@ -26,7 +26,7 @@ export default function Home({ data }) {
         <Company data={data}></Company>
         <section className={styles.navToData}>
           <Link href="/category/launches">
-            <a>Let's get started!</a>
+            <a>Let&apos;s get started!</a>
           </Link>
         </section>
       </main>
