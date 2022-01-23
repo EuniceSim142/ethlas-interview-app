@@ -6,6 +6,11 @@ import { faYoutube, faReddit } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 import moment from "moment";
 
+/**
+ * Creates and returns a Launch Component.
+ * @param {JSON} data Launch data to populate the component with.
+ * @returns Launch Component.
+ */
 export default function launch({ data }) {
   let imgSrc = data?.links.flickr.original[0];
   if (imgSrc == null) {

@@ -3,6 +3,11 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFlickr } from "@fortawesome/free-brands-svg-icons";
 
+/**
+ * Creates and returns a Company Component.
+ * @param {JSON} data Company data to populate the component with.
+ * @returns Company Component.
+ */
 export default function company({ data }) {
   const imgSrc = "/images/SpaceX.jpeg";
 

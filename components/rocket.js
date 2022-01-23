@@ -3,8 +3,12 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 import moment from "moment";
-import { IMAGE_DOMAIN } from "../constants/utils";
 
+/**
+ * Creates and returns a Rocket Component.
+ * @param {JSON} data Rocket data to populate the component with.
+ * @returns Rocket Component.
+ */
 export default function rocket({ data }) {
   let imgSrc = data?.flickr_images[0];
   if (imgSrc == null) {

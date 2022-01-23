@@ -1,10 +1,13 @@
 import styles from "./layout.module.css";
 import Link from "next/link";
-import ROUTES from "../constants/routes";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faYoutube, faReddit } from "@fortawesome/free-brands-svg-icons";
-import { faGithub } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * Creates and returns a Layout Component.
+ * Provides the same header and footer for all list pages.
+ *
+ * @param {HTML} children Content of page.
+ * @returns Layout Component.
+ */
 export default function Layout({ children }) {
   return (
     <article className={styles.container}>

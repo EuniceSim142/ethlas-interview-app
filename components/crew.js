@@ -3,6 +3,11 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 
+/**
+ * Creates and returns a Crew Component.
+ * @param {JSON} data Crew data to populate the component with.
+ * @returns Crew Component.
+ */
 export default function crew({ data }) {
   const launches = data.launches.join(", ");
 

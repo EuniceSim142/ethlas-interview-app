@@ -1,11 +1,14 @@
 import Layout from "../../components/layout";
 import Head from "next/head";
-import Link from "next/link";
 import Launch from "../../components/launch";
 import styles from "../../styles/List.module.css";
 import { spaceXClient } from "../../lib/spacex-client";
-import { URL_PATHS } from "../../constants/utils";
 
+/**
+ * Displays all Launch data using {@link Launch} Component.
+ * @param {JSON} data Array of Launch data.
+ * @returns Launch page.
+ */
 export default function launches({ data }) {
   return (
     <Layout>
@@ -22,6 +25,10 @@ export default function launches({ data }) {
   );
 }
 
+/**
+ * Generates the data used in this page.
+ * @returns props containing launch data.
+ */
 export const getStaticProps = async () => {
   const allLaunchData = await spaceXClient.fetchAllLaunchData();
 

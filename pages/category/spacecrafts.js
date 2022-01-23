@@ -5,6 +5,12 @@ import Rocket from "../../components/rocket";
 import styles from "../../styles/List.module.css";
 import { spaceXClient } from "../../lib/spacex-client";
 
+/**
+ * Displays all Dragon and Rocket data using {@link Dragon} and {@link Rocket} Components respectively.
+ * @param {JSON} dragons Array of Dragon data.
+ * @param {JSON} rockets Array of Rocket data.
+ * @returns Spacecraft page.
+ */
 export default function spacecrafts({ dragons, rockets }) {
   return (
     <Layout>
@@ -24,6 +30,10 @@ export default function spacecrafts({ dragons, rockets }) {
   );
 }
 
+/**
+ * Generates the data used in this page.
+ * @returns props containing dragon and rocket data.
+ */
 export const getStaticProps = async () => {
   const allDragonData = await spaceXClient.fetchAllDragonData();
   const allRocketData = await spaceXClient.fetchAllRocketData();

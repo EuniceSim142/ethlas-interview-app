@@ -4,6 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 import moment from "moment";
 
+/**
+ * Creates and returns a Dragon Component.
+ * @param {JSON} data Dragon data to populate the component with.
+ * @returns Dragon Component.
+ */
 export default function dragon({ data }) {
   let imgSrc = data?.flickr_images[0];
   if (imgSrc == null) {
