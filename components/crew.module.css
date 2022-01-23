@@ -11,10 +11,9 @@
 }
 
 .image {
-  width: 50%;
+  width: 60%;
   padding: 1%;
   border-radius: 40px;
-  max-height: 60%;
   object-fit: cover;
 }
 

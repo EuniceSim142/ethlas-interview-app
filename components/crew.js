@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 
 export default function crew({ data }) {
+  const launches = data.launches.join(", ");
+
   return (
     <article className={styles.container}>
       <img
@@ -28,7 +30,7 @@ export default function crew({ data }) {
           <strong>Agency:</strong> {data.agency}
         </li>
         <li className={styles.crew_data}>
-          <strong>Launch:</strong> {data.launches}
+          <strong>Launches:</strong> {launches}
         </li>
         <li className={styles.crew_data}>
           <strong>Media:</strong>
