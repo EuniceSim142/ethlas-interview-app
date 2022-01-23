@@ -16,6 +16,12 @@
   object-fit: cover;
 }
 
+.no_image {
+  width: 20%;
+  margin: 5%;
+  object-fit: contain;
+}
+
 .content {
   padding: 1%;
   display: flex;

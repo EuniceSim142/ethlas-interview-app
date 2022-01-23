@@ -3,12 +3,12 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWikipediaW } from "@fortawesome/free-brands-svg-icons";
 import moment from "moment";
-import { IMAGE_DOMAIN } from "../constants/utils";
 
 export default function dragon({ data }) {
-  const imgSrc = data?.flickr_images.find((link) =>
-    link.includes(IMAGE_DOMAIN)
-  );
+  let imgSrc = data?.flickr_images[0];
+  if (imgSrc == null) {
+    imgSrc = "/images/no-pictures.png";
+  }
   const date = new moment(data?.first_flight).format("MMMM Do YYYY");
 
   return (
@@ -16,7 +16,9 @@ export default function dragon({ data }) {
       <img
         src={imgSrc}
         alt={"Image of " + data.name}
-        className={styles.image}
+        className={
+          imgSrc == "/images/no-pictures.png" ? styles.no_image : styles.image
+        }
       ></img>
       <ul className={styles.content}>
         <li
@@ -48,16 +50,18 @@ export default function dragon({ data }) {
         <li className={styles.dragon_data}>
           <strong>Media:</strong>
           <ul className={styles.media_content}>
-            <li className={styles.dragon_data_link}>
-              <Link href={data.wikipedia}>
-                <a>
-                  <FontAwesomeIcon
-                    icon={faWikipediaW}
-                    alt="Wikipedia"
-                  ></FontAwesomeIcon>
-                </a>
-              </Link>
-            </li>
+            {data.wikipedia && (
+              <li className={styles.dragon_data_link}>
+                <Link href={data.wikipedia}>
+                  <a>
+                    <FontAwesomeIcon
+                      icon={faWikipediaW}
+                      alt="Wikipedia"
+                    ></FontAwesomeIcon>
+                  </a>
+                </Link>
+              </li>
+            )}
           </ul>
         </li>
       </ul>

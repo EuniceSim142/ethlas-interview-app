@@ -6,9 +6,10 @@ import moment from "moment";
 import { IMAGE_DOMAIN } from "../constants/utils";
 
 export default function rocket({ data }) {
-  const imgSrc = data?.flickr_images.find((link) =>
-    link.includes(IMAGE_DOMAIN)
-  );
+  let imgSrc = data?.flickr_images[0];
+  if (imgSrc == null) {
+    imgSrc = "/images/no-pictures.png";
+  }
   const date = new moment(data?.first_flight).format("MMMM Do YYYY");
   const cost_in_USD = Intl.NumberFormat("en-US", {
     style: "currency",
@@ -20,7 +21,9 @@ export default function rocket({ data }) {
       <img
         src={imgSrc}
         alt={"Image of " + data.name}
-        className={styles.image}
+        className={
+          imgSrc == "/images/no-pictures.png" ? styles.no_image : styles.image
+        }
       ></img>
       <ul className={styles.content}>
         <li
