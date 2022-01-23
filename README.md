@@ -1,24 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Discover SpaceX
+A website built with Next.js, using the SpaceX REST API and deployed with Vercel.
+
+## Currently: v1.0 release 
+
+[See the website here](https://ethlas-interview-app.vercel.app/)<br>
+[See documentation here](https://github.com/EuniceSim142/ethlas-interview-app/blob/main/docs/index.md)
+
+[(Real SpaceX website)](https://www.spacex.com/)
+
+## Credits to:
+* [SpaceX REST API](https://github.com/r-spacex/SpaceX-API)
+* [Spacecraft logo](https://www.svgrepo.com/svg/285335/spacecraft-spaceship)
+* [No-images placeholder](https://www.flaticon.com/premium-icon/no-pictures_3875172?term=no%20image&page=1&position=2&page=1&position=2&related_id=3875172&origin=search)
+* [Space Exploration Technologies Corp. image](https://en.wikipedia.org/wiki/SpaceX#/media/File:Iridium-4_Mission_(25557986177).jpg)
+
+### Disclaimer:
+We are not affiliated, associated, authorized, endorsed by, or in any way officially connected with Space Exploration Technologies Corp (SpaceX), or any of its subsidiaries or its affiliates. The names SpaceX as well as related names, marks, emblems` and images are registered trademarks of their respective owners.
+
+<br>
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
+First, run the development server: npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
